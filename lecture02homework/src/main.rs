@@ -1,6 +1,5 @@
 use std::env;
 use std::io;
-use slug;
 
 // cargo run <action>
 fn main() {
@@ -19,7 +18,7 @@ fn main() {
     io::stdin().read_line(&mut input).expect("Failed to read the input");
     let input = input.trim();
 
-    if input.len() == 0 {
+    if input.is_empty() {
         println!("Insufficient input length!")
     }
 
@@ -31,7 +30,7 @@ fn main() {
             println!("{}", input.to_uppercase());
         }
         "no-spaces" => {
-            println!("{}", input.replace(" ", ""));
+            println!("{}", input.replace(' ', ""));
         }
         "slugify" => {
             println!("{}", slug::slugify(input));
