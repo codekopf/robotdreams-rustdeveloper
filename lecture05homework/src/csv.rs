@@ -11,8 +11,8 @@ impl fmt::Display for Csv {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
 
         // Determine the maximum width for each column
+        // O(T): n
         let mut column_max_widths = self.headers.iter().map(|header| header.len()).collect::<Vec<_>>();
-
         for row in &self.values {
             for (i, value) in row.iter().enumerate() {
                 column_max_widths[i] = column_max_widths[i].max(value.len());
