@@ -9,8 +9,8 @@ use std::sync::mpsc;
 use std::sync::mpsc::{Receiver, Sender};
 use std::thread::JoinHandle;
 use command::Command;
-use std::str::FromStr;
-use std::time::{Duration, Instant}; // TODO abuday - This is weird - I take Traits as intefaces (Java~Scala). Why do I need to add their scope here?
+use std::str::FromStr; // TODO abuday - This is weird - I take Traits as intefaces (Java~Scala). Why do I need to add their scope here?
+use std::time::{Duration, Instant};
 use std::fs;
 
 // abuday notes:
