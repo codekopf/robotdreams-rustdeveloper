@@ -5,8 +5,6 @@ pub struct Csv {
     pub values: Vec<Vec<String>>,
 }
 
-// Testing input
-// Name, Age, Job, Bonus Points X John Doe, 64, Software Engineer, 1000 X Jane Smith, 32, Doctor, 2000 X Alice Back, 54, Gardener, 6000 X Bob Green, 41, Manager, 5000 X Charlie White, 50, CEO, 2000000
 impl fmt::Display for Csv {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
 

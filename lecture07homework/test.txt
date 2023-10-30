@@ -1,0 +1,6 @@
+Name, Age, Job, Bonus Points
+John Doe, 64, Software Engineer, 1000
+Jane Smith, 32, Doctor, 2000
+Alice Back, 54, Gardener, 6000
+Bob Green, 41, Manager, 5000
+Charlie White, 50, CEO, 2000000
