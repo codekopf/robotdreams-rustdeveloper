@@ -3,23 +3,80 @@
 version = 3
 
 [[package]]
-name = "deunicode"
-version = "0.4.4"
+name = "half"
+version = "1.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d95203a6a50906215a502507c0f879a0ce7ff205a6111e2db2a5ef8e4bb92e43"
+checksum = "eabb4a44450da02c90444cf74558da904edde8fb4e9035a9a6a4e15445af0bd7"
 
 [[package]]
 name = "lecture09homework"
 version = "0.1.0"
 dependencies = [
- "slug",
+ "serde",
+ "serde_cbor",
 ]
 
 [[package]]
-name = "slug"
-version = "0.1.4"
+name = "proc-macro2"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b3bc762e6a4b6c6fcaade73e77f9ebc6991b676f88bb2358bddb56560f073373"
+checksum = "134c189feb4956b20f6f547d2cf727d4c0fe06722b20a0eec87ed445a97f92da"
 dependencies = [
- "deunicode",
+ "unicode-ident",
 ]
+
+[[package]]
+name = "quote"
+version = "1.0.33"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
+name = "serde"
+version = "1.0.191"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a834c4821019838224821468552240d4d95d14e751986442c816572d39a080c9"
+dependencies = [
+ "serde_derive",
+]
+
+[[package]]
+name = "serde_cbor"
+version = "0.11.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2bef2ebfde456fb76bbcf9f59315333decc4fda0b2b44b420243c11e0f5ec1f5"
+dependencies = [
+ "half",
+ "serde",
+]
+
+[[package]]
+name = "serde_derive"
+version = "1.0.191"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "46fa52d5646bce91b680189fe5b1c049d2ea38dabb4e2e7c8d00ca12cfbfbcfd"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "syn"
+version = "2.0.39"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23e78b90f2fcf45d3e842032ce32e3f2d1545ba6636271dcbf24fa306d87be7a"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
+name = "unicode-ident"
+version = "1.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
